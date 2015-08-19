@@ -52,8 +52,8 @@ function makeExpressApp ( app ) {
                     gm()
                         .command("composite") 
                         .in("-gravity", "center")
-                        .in( filenameOCM )
                         .in( filenameLejog )
+                        .in( filenameOCM )
                         .write( filenameOCM + filenameLejog, function ( e ) {
                             if (!e) {
                                 fs.createReadStream( filenameOCM + filenameLejog ).pipe( res );
